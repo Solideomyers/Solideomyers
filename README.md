@@ -31,7 +31,7 @@
 
 <p align="center">
 
-<a href="https://www.linkedin.com/in/francisco-myers-148a7919a/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Francisco%20Myers-blue?style=flat-square&logo=linkedin"></a>
+<a href="https://www.linkedin.com/in/franciscomyers/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Francisco%20Myers-blue?style=flat-square&logo=linkedin"></a>
 </a>
 
 <a href="mailto:franciscomyers@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-franciscomyers@gmail.com-blue?style=flat-square&logo=gmail"></a>
