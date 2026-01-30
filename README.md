@@ -17,12 +17,17 @@
 ## 📊 GitHub Insights
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Solideomyers&show_icons=true&theme=tokyonight&count_private=true" alt="GitHub Stats" height="180px"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Solideomyers&layout=compact&theme=tokyonight&hide=html,css" alt="Top Languages" height="180px"/>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Solideomyers&theme=tokyonight" alt="Streak Stats" />
+  <table border="0">
+    <tr>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api?username=Solideomyers&show_icons=true&theme=radical&count_private=true&include_all_commits=true" alt="GitHub Stats" height="195px"/>
+      </td>
+      <td>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Solideomyers&layout=compact&theme=radical&hide=html,css" alt="Top Languages" height="195px"/>
+      </td>
+    </tr>
+  </table>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Solideomyers&theme=radical&hide_border=true" alt="Streak Stats" width="100%" />
 </div>
 
 ## 🛠️ Tech Stack & Skills
