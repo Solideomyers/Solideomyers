@@ -25,13 +25,14 @@
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-churchapp-dark.svg">
   <img alt="FM-01 ChurchApp — membership management for Gracia Eterna" src="assets/project-churchapp-light.svg" width="100%">
 </picture>
-<!-- Screenshot: <img src="assets/shots/churchapp.png" width="100%"> -->
+<img alt="ChurchApp public membership application page" src="assets/shots/churchapp.png" width="100%">
+<img alt="ChurchApp admin panel overview" src="assets/shots/churchapp-panel.jpg" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-chapel-dark.svg">
   <img alt="FM-02 Chapel — warehouse and book-distribution system" src="assets/project-chapel-light.svg" width="100%">
 </picture>
-<!-- Screenshot: <img src="assets/shots/chapel.png" width="100%"> -->
+<img alt="Chapel mobile app: dashboard, stock charts, batch entry and recent activity" src="assets/shots/chapel.png" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-aquapro-dark.svg">
