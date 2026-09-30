@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import ot from 'opentype.js';
 const fontFile = p => { const b = readFileSync(new URL(`../node_modules/@fontsource/${p}`, import.meta.url)); return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength); };
-// Generates fmyers.dev README sheets (880px, outlined text). Run via run_script: eval + gen(filterRegex)
+// Generates fmyers.dev README sheets (880px, outlined text).
 async function gen(only){
 
 const load=async p=>ot.parse(fontFile(p));
