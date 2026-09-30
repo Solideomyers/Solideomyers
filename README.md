@@ -55,8 +55,8 @@
   <img alt="GitHub stats" src="https://github-stats-extended.vercel.app/api?username=Solideomyers&show_icons=true&count_private=true&include_all_commits=true&hide_title=true&bg_color=F2F3EF&title_color=15181C&text_color=5B626A&icon_color=2B55C8&border_color=C4C9C1&border_radius=0" height="165">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=Solideomyers&layout=compact&hide=html,css&hide_title=true&bg_color=0E1114&title_color=E9EBE6&text_color=98A0A8&icon_color=86A4F2&border_color=353C44&border_radius=0">
-  <img alt="Top languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Solideomyers&layout=compact&hide=html,css&hide_title=true&bg_color=F2F3EF&title_color=15181C&text_color=5B626A&icon_color=2B55C8&border_color=C4C9C1&border_radius=0" height="165">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=Solideomyers&layout=compact&hide=html%2Ccss&hide_title=true&bg_color=0E1114&title_color=E9EBE6&text_color=98A0A8&icon_color=86A4F2&border_color=353C44&border_radius=0">
+  <img alt="Top languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Solideomyers&layout=compact&hide=html%2Ccss&hide_title=true&bg_color=F2F3EF&title_color=15181C&text_color=5B626A&icon_color=2B55C8&border_color=C4C9C1&border_radius=0" height="165">
 </picture>
 
 </div>
