@@ -27,12 +27,14 @@
 </picture>
 <img alt="ChurchApp public membership application page" src="assets/shots/churchapp.png" width="100%">
 <img alt="ChurchApp admin panel overview" src="assets/shots/churchapp-panel.jpg" width="100%">
+<sub><a href="case-studies/FM-01-churchapp.md">Case study · Caso de estudio →</a></sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-chapel-dark.svg">
   <img alt="FM-02 Chapel — warehouse and book-distribution system" src="assets/project-chapel-light.svg" width="100%">
 </picture>
 <img alt="Chapel mobile app: dashboard, stock charts, batch entry and recent activity" src="assets/shots/chapel.png" width="100%">
+<sub><a href="case-studies/FM-02-chapel.md">Case study · Caso de estudio →</a></sub>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/project-aquapro-dark.svg">
