@@ -12,13 +12,15 @@ m:await load('jetbrains-mono/files/jetbrains-mono-latin-500-normal.woff')};
 const T={light:{bg:'#F2F3EF',ink:'#15181C',mute:'#5B626A',rule:'#C4C9C1',grid:'#E4E7E1',acc:'#2B55C8',accInk:'#FFFFFF',sig:'#1F8A4C',panel:'#F8F9F6'},
 dark:{bg:'#0E1114',ink:'#E9EBE6',mute:'#98A0A8',rule:'#353C44',grid:'#171C21',acc:'#86A4F2',accInk:'#0E1114',sig:'#4CC47F',panel:'#12161A'}};
 const ARW=.62;
+const GLY=new Map();const FK=new Map([[F.d,'d'],[F.b,'b'],[F.m,'m']]);
+function glyph(f,ch){const id=`${FK.get(f)}${ch.codePointAt(0)}`;if(!GLY.has(id)){const d=f.getPath(ch,0,0,f.unitsPerEm).toPathData(1);GLY.set(id,d);}return GLY.get(id)?id:null;}
 function W(s,o){const f=F[o.f||'b'],size=o.size||14,ls=o.ls||0;let w=0;for(const ch of s)w+=(ch==='→'?size*ARW:f.getAdvanceWidth(ch,size))+ls;return w-ls;}
 function t(x,y,s,o={}){s=String(s).replace(/−/g,'-');const f=F[o.f||'b'],size=o.size||14,ls=o.ls||0;
  let cx=o.anchor==='middle'?x-W(s,o)/2:o.anchor==='end'?x-W(s,o):x;let d='',extra='';
  for(const ch of s){if(ch==='→'){const a=size*ARW,h=size*.22,my=y-size*.32,x0=cx+size*.05,x1=cx+a-size*.08;
    extra+=`<path d="M${x0.toFixed(1)} ${my.toFixed(1)}H${x1.toFixed(1)}M${(x1-h).toFixed(1)} ${(my-h).toFixed(1)}L${x1.toFixed(1)} ${my.toFixed(1)}L${(x1-h).toFixed(1)} ${(my+h).toFixed(1)}" fill="none" stroke="${o.fill}" stroke-width="${(size*.09).toFixed(2)}"/>`;cx+=a+ls;continue;}
-  d+=f.getPath(ch,cx,y,size).toPathData(1);cx+=f.getAdvanceWidth(ch,size)+ls;}
- o.end=cx-ls;return `<path d="${d}" fill="${o.fill}"/>`+extra;}
+  const id=glyph(f,ch);if(id)d+=`<use href="#${id}" transform="translate(${cx.toFixed(1)} ${y.toFixed(1)}) scale(${(size/f.unitsPerEm).toFixed(5)})"/>`;cx+=f.getAdvanceWidth(ch,size)+ls;}
+ o.end=cx-ls;return `<g fill="${o.fill}">${d}</g>`+extra;}
 const M=(x,y,s,c,o={})=>t(x,y,s,{f:'m',size:11,fill:c.mute,ls:1,...o});
 function frame(w,h,c,label){
  let s=`<rect width="${w}" height="${h}" fill="${c.bg}"/><defs><pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="${c.grid}"/></pattern></defs>`;
@@ -86,7 +88,9 @@ btn('whatsapp','Message on WhatsApp',1);btn('linkedin','Connect on LinkedIn',0);
 if(!only||only.test('logo'))for(const th of ['light','dark']){const c=T[th];
  files[`assets/logo-${th}.svg`]={w:512,h:512,body:`<rect width="512" height="512" fill="${c.bg}"/>`+mark(76,76,360,c)};
  files[`assets/wordmark-${th}.svg`]={w:520,h:120,body:`<rect width="520" height="120" fill="${c.bg}"/>`+dotted(24,84,'fmyers','dev',66,c,14)};}
-const out={};for(const [p,v] of Object.entries(files))out[p]=`<svg xmlns="http://www.w3.org/2000/svg" width="${v.w}" height="${v.h}" viewBox="0 0 ${v.w} ${v.h}">${v.body}</svg>`;
+const out={};for(const [p,v] of Object.entries(files)){const used=[...new Set(v.body.match(/href="#[a-z]\d+"/g)||[])].map(h=>h.slice(7,-1));
+ const defs=used.length?`<defs>${used.map(id=>`<path id="${id}" d="${GLY.get(id)}"/>`).join('')}</defs>`:'';
+ out[p]=`<svg xmlns="http://www.w3.org/2000/svg" width="${v.w}" height="${v.h}" viewBox="0 0 ${v.w} ${v.h}">${defs}${v.body}</svg>`;}
 return out;}
 
 const out = await gen(process.argv[2] ? new RegExp(process.argv[2]) : undefined);
